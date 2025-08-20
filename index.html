@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>HyperTap - One Touch Game Template</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="game"></canvas>
+    <div id="ui">
+      <div class="row">
+        <div class="brand">HyperTap</div>
+        <div class="spacer"></div>
+        <button id="btn-sound" aria-label="Toggle Sound">🔊</button>
+        <button id="btn-pause" aria-label="Pause/Resume">⏸</button>
+      </div>
+      <div class="score-wrap">
+        <div id="score">0</div>
+        <div id="best">BEST: 0</div>
+      </div>
+      <div id="menu" class="menu hidden">
+        <h1 id="title">HyperTap</h1>
+        <p id="subtitle">Tap to jump. Avoid obstacles. Get the best score!</p>
+        <button id="btn-play" class="primary">Tap to Play</button>
+        <div class="small">
+          <label>Difficulty
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="normal" selected>Normal</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="gameover" class="menu hidden">
+        <h2>Game Over</h2>
+        <div class="final-score">SCORE: <span id="final">0</span></div>
+        <button id="btn-retry" class="primary">Retry</button>
+        <button id="btn-share">Share</button>
+      </div>
+      <div id="ad-slot" class="ad-slot"></div>
+    </div>
+  </div>
+
+  <!-- Adsterra placeholder. Replace with your ad code (e.g., Social Bar / Banner) -->
+  <!-- Example:
+  <script type="text/javascript">
+    atOptions = { 'key': 'YOUR_KEY', 'format': 'iframe', 'height': 50, 'width': 320, 'params': {} };
+    document.getElementById('ad-slot').innerHTML =
+      '<scr' + 'ipt type="text/javascript" src="//www.profitabledisplaynetwork.com/KEY/invoke.js"></scr' + 'ipt>';
+  </script>
+  -->
+
+  <script src="game.js"></script>
+</body>
+</html>
